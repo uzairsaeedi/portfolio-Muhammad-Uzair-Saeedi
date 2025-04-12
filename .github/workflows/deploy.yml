@@ -1,0 +1,19 @@
+name: Deploy Static Site
+
+on:
+  push:
+    branches:
+      - main  # Change this if your website files are in another branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # The branch to deploy to
+          folder: .  # The folder containing your website files
