@@ -5142,6 +5142,17 @@ h4,
   color: #0389ff;
 }
 
+#home-section {
+  padding-top: 30px;
+  /* Or whatever fits best */
+}
+
+#portfolio-section {
+  padding-top: 20px !important;
+  /* Keep it tight */
+  margin-top: 0 !important;
+}
+
 /*PRELOADING------------ */
 #overlayer {
   width: 100%;
