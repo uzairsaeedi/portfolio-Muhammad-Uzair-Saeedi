@@ -1,255 +1,226 @@
-<!-- /*
-* Template Name: Minimal
-* Template Author: Untree.co
-* Author URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="author" content="Untree.co" />
-    <link rel="shortcut icon" href="favicon.png" />
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="Muhammad Uzair Saeedi" />
+  <link rel="shortcut icon" href="favicon.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Mono&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Mono&display=swap"
+    rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="fonts/icomoon/style.css" />
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
-    <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="fonts/icomoon/style.css" />
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+  <link rel="stylesheet" href="css/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-    <title>RentEase</title>
-  </head>
+  <title>RentEase</title>
 
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close">
-          <span class="icofont-close js-menu-toggle"></span>
-        </div>
+  <style>
+    .heading-project {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .project-details {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .detail-v1 .detail-label {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    .detail-v1 .detail-val {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #212529;
+    }
+
+    .img-fluid {
+      border-radius: 14px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .img-fluid:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    ul li::marker {
+      color: #0d6efd;
+    }
+
+    .btn-github {
+      border-width: 2px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn-github:hover {
+      background-color: #212529;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .heading-project {
+        font-size: 1.75rem;
+      }
+
+      .project-details {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
+
+  <!-- MOBILE MENU -->
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
       </div>
-      <div class="site-mobile-menu-body"></div>
     </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
 
-    <nav class="site-nav dark site-navbar-target">
-      <div class="container">
-        <div class="site-navigation">
-          <a href="index.html" class="logo m-0"
-            >Project<span class="text-primary">.</span></a
-          >
-
-          <ul
-            class="js-clone-nav d-none d-lg-inline-none site-menu float-right"
-          >
-            <li><a href="index.html" class="nav-link active">Home</a></li>
-            <!-- <li><a href="#portfolio-section">Portfolio</a></li>
-
-          <li class="has-children">
-            <a href="#about-section">About</a>
-            <ul class="dropdown">
-              <li><a href="elements.html">Elements</a></li>
-              <li class="has-children">
-                <a href="#">Menu Two</a>
-                <ul class="dropdown">
-                  <li><a href="#">Sub Menu One</a></li>
-                  <li><a href="#">Sub Menu Two</a></li>
-                  <li><a href="#">Sub Menu Three</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Menu Three</a></li>
-            </ul>
-          </li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact us</a></li> -->
-          </ul>
-
-          <a
-            href="#"
-            class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-inline-block"
-            data-toggle="collapse"
-            data-target="#main-navbar"
-          >
-            <span></span>
-          </a>
-        </div>
+  <!-- NAVBAR -->
+  <nav class="site-nav dark site-navbar-target">
+    <div class="container">
+      <div class="site-navigation">
+        <a href="index.html" class="logo m-0">Projects<span class="text-primary">.</span></a>
+        <ul class="js-clone-nav d-none d-lg-inline-none site-menu float-right">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+        </ul>
+        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-inline-block"
+          data-toggle="collapse" data-target="#main-navbar">
+          <span></span>
+        </a>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div
-      class="untree_co-section untree_co-section-4 pb-0"
-      id="portfolio-section"
-    >
-      <div class="container">
-        <div
-          class="portfolio-single-wrap unslate_co--section"
-          id="portfolio-single-section"
-        >
-          <div class="portfolio-single-inner">
-            <h2 class="heading-portfolio-single-h2 text-black">
-              RentEase Application
-            </h2>
+  <!-- PROJECT SECTION -->
+  <div class="untree_co-section untree_co-section-4 pb-0" id="portfolio-section">
+    <div class="container">
+      <div class="portfolio-single-wrap unslate_co--section" id="portfolio-single-section">
 
-            <div class="row justify-content-between mb-5">
-              <div class="col-lg-12 mb-5 mb-lg-0">
-                <div class="row">
-                  <div class="col-lg-6">
-                    <img src="images/img_2.jpg" alt="Image" class="img-fluid" />
-                  </div>
-                  <div class="col-lg-6">
-                    <!-- <img src="images/img_5.jpg" alt="Image" class="img-fluid"> -->
-                  </div>
-                </div>
-              </div>
+        <!-- TITLE -->
+        <div class="portfolio-single-inner mb-5">
+          <h2 class="heading-project">RentEase Application</h2>
+        </div>
 
-              <div class="col-12 my-5">
-                <div class="row">
-                  <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="detail-v1">
-                      <span class="detail-label">Project Date</span>
-                      <span class="detail-val">August 9th, 2024</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="detail-v1">
-                      <!-- <span class="detail-label">Role</span>
-                    <span class="detail-val"><a href="#">Identity</a>, <a href="#">Web Design</a></span> -->
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="detail-v1">
-                      <!-- <span class="detail-label">Client</span>
-                    <span class="detail-val">Untree.co</span> -->
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="detail-v1">
-                      <span class="detail-label">Visit</span>
-                      <span class="detail-val"
-                        ><a href="https://github.com/uzairsaeedi/Rent_Ease.git"
-                          >github</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </div>
+        <!-- IMAGE -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8">
+            <img src="images/img_2.jpg" alt="RentEase App" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="project-details">
+          <div class="row justify-content-center text-center text-md-start align-items-center">
+            <div class="col-lg-10 d-flex justify-content-center justify-content-md-between flex-wrap gap-4">
+              <div class="detail-v1">
+                <span class="detail-label d-block">Project Date</span>
+                <span class="detail-val">August 9th, 2024</span>
               </div>
-              <div class="col-md-6">
-                <p>
-                  RentEase is a fully-featured Android car rental application
-                  developed using Javaa and Firebase, designed with two
-                  dedicated portals: User Portal and Admin Portal. It provides a
-                  seamless experience for users to browse, book, and manage
-                  rental cars while giving administrators complete control over
-                  car listings and user management. It offers a scalable and
-                  efficient solution for car rental businesses looking to
-                  automate their operations.
-                </p>
-              </div>
-              <div class="col-md-6">
-                <p><b>Key Features:</b></p>
-                <li>
-                  <b>Secure Authentication: </b>Login/register with Firebase
-                  Authentication.
-                </li>
-                <li>
-                  <b>Firebase Integration: </b>Utilizes Firebase Authentication
-                  for secure user login and registration, along with Firebase
-                  Firestore for efficient real-time database management.
-                </li>
-                <li>
-                  <b>User Management: </b>View, activate, deactivate, or remove
-                  users from the system.
-                </li>
-                <li>
-                  <b>Car Management: </b>Add, update, or remove rental cars from
-                  the inventory.
-                </li>
+              <div class="detail-v1">
+                <span class="detail-label d-block">Platform</span>
+                <span class="detail-val">Android App</span>
               </div>
             </div>
           </div>
+          <a href="https://github.com/uzairsaeedi/Rent_Ease.git" class="btn btn-outline-dark btn-github mt-3"><span
+              class="icon-github me-2 mr-2"></span>View GitHub Repo</a>
         </div>
-      </div>
-    </div>
 
-    <div class="site-footer">
-      <div class="container">
-        <div class="col-lg-3">
-          <div class="widget">
-            <h3>Contact</h3>
-            <!-- <address>43 Raymouth Rd. Baltemoer, London 3910</address> -->
-            <ul class="list-unstyled links mb-4">
-              <li><a href="tel://923330321627">+92 3330321627</a></li>
-              <li><a href="tel://923330321627">+92 3195957277</a></li>
-              <li>
-                <a href="mailto:uzairsaeedi627@gmail.com"
-                  >uzairsaeedi627@gmail.com</a
-                >
+        <div class="row gy-4 align-items-start mt-4">
+          <div class="col-md-6">
+            <p class="lead">RentEase is a fully-featured Android car rental application developed using Java and
+              Firebase,
+              designed with two dedicated portals: User Portal and Admin Portal. It provides a seamless experience for
+              users
+              to browse, book, and manage rental cars while giving administrators complete control over car listings and
+              user management. It offers a scalable and efficient solution for car rental businesses looking to automate
+              their operations.</p>
+          </div>
+          <div class="col-md-6">
+            <p class="fw-semibold mb-2">Key Features:</p>
+            <ul class="list-unstyled">
+              <li class="mb-2"><b>Secure Authentication:</b> Login/register with Firebase Authentication.</li>
+              <li class="mb-2"><b>Firebase Integration:</b> Uses Firebase Firestore for real-time database management.
               </li>
-            </ul>
-
-            <h3>Connect</h3>
-            <ul class="list-unstyled social d-flex gap-3">
-              <!-- <li><a href="#"><span class="icon-instagram"></span></a></li>
-              <li><a href="#"><span class="icon-twitter"></span></a></li> -->
-              <li>
-                <a href="https://www.facebook.com/muhammaduzairsaeedi/"
-                  ><span class="icon-facebook"></span
-                ></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/muhammad-uzair-saeedi"
-                  ><span class="icon-linkedin"></span
-                ></a>
-              </li>
-              <!-- <li><a href="#"><span class="icon-pinterest"></span></a></li> -->
-              <li>
-                <a href="https://www.github.com/uzairsaeedi"
-                  ><span class="icon-github"></span
-                ></a>
-              </li>
+              <li class="mb-2"><b>User Management:</b> View, activate, deactivate, or remove users from the system.</li>
+              <li class="mb-2"><b>Car Management:</b> Add, update, or remove rental cars from the inventory.</li>
             </ul>
           </div>
-          <!-- /.widget -->
         </div>
-        <!-- /.col-lg-3 -->
+
       </div>
-      <!-- /.container -->
     </div>
-    <!-- /.site-footer -->
+  </div>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/wave-animate.js"></script>
-    <script src="js/circle-progress.js"></script>
-    <script src="js/imagesloaded.pkgd.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/ScrollMagic.min.js"></script>
-    <script src="js/scrollmagic.animation.gsap.min.js"></script>
+  <!-- FOOTER -->
+  <div class="site-footer">
+    <div class="container">
+      <div class="col-lg-3">
+        <div class="widget">
+          <h3>Contact</h3>
+          <ul class="list-unstyled links mb-4">
+            <li><a href="tel://923330321627">+92 3330321627</a></li>
+            <li><a href="tel://923330321627">+92 3195957277</a></li>
+            <li><a href="mailto:uzairsaeedi627@gmail.com">uzairsaeedi627@gmail.com</a></li>
+          </ul>
+          <h3>Connect</h3>
+          <ul class="list-unstyled social d-flex gap-3">
+            <li><a href="https://www.facebook.com/muhammaduzairsaeedi/"><span class="icon-facebook"></span></a></li>
+            <li><a href="https://www.linkedin.com/in/muhammad-uzair-saeedi"><span class="icon-linkedin"></span></a></li>
+            <li><a href="https://www.github.com/uzairsaeedi"><span class="icon-github"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="js/custom.js"></script>
-  </body>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/wave-animate.js"></script>
+  <script src="js/circle-progress.js"></script>
+  <script src="js/imagesloaded.pkgd.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/ScrollMagic.min.js"></script>
+  <script src="js/scrollmagic.animation.gsap.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
 </html>

@@ -1,9 +1,3 @@
-<!-- /*
-* Template Name: Minimal
-* Template Author: Untree.co
-* Author URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <!doctype html>
 <html lang="en">
 
@@ -13,12 +7,10 @@
   <meta name="author" content="Untree.co">
   <link rel="shortcut icon" href="favicon.png">
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Mono&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -30,10 +22,77 @@
   <link rel="stylesheet" href="css/style.css">
 
   <title>Jenkins CI/CD Pipeline</title>
+
+  <style>
+    .heading-portfolio-single-h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .project-details {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .detail-v1 .detail-label {
+      font-size: 0.95rem;
+      color: #6c757d;
+    }
+
+    .detail-v1 .detail-val {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #212529;
+    }
+
+    .img-fluid {
+      border-radius: 14px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .img-fluid:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    ul li::marker {
+      color: #0d6efd;
+    }
+
+    .btn-github {
+      border-width: 2px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn-github:hover {
+      background-color: #212529;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .heading-portfolio-single-h2 {
+        font-size: 1.75rem;
+      }
+
+      .project-details {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
-
 
   <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
@@ -43,130 +102,109 @@
     </div>
     <div class="site-mobile-menu-body"></div>
   </div>
-  
+
   <nav class="site-nav dark site-navbar-target">
     <div class="container">
       <div class="site-navigation">
-        <a href="index.html" class="logo m-0">Project<span class="text-primary">.</span></a>
+        <a href="index.html" class="logo m-0">Projects<span class="text-primary">.</span></a>
 
         <ul class="js-clone-nav d-none d-lg-inline-none site-menu float-right">
           <li><a href="index.html" class="nav-link active">Home</a></li>
-          <!-- <li><a href="#portfolio-section">Portfolio</a></li>
-
-          <li>
-            <a href="#about-section">About</a> -->
-          </li>
         </ul>
 
-        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-inline-block" data-toggle="collapse" data-target="#main-navbar">
+        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-inline-block"
+          data-toggle="collapse" data-target="#main-navbar">
           <span></span>
         </a>
-
       </div>
     </div>
   </nav>
 
-
-
-  
-
-
-  <div class="untree_co-section untree_co-section-4 pb-0"  id="portfolio-section">
+  <div class="untree_co-section untree_co-section-4 pb-0" id="portfolio-section">
     <div class="container">
       <div class="portfolio-single-wrap unslate_co--section" id="portfolio-single-section">
 
-        <div class="portfolio-single-inner">
-          <h2 class="heading-portfolio-single-h2 text-black">Jenkins CI/CD Pipeline</h2>
-          <div class="row mb-5 align-items-stretch">
-            <div class="col-12 mb-5">
-                <img src="images/img_6.png" alt="Image" class="img-fluid w-100">
-            </div>
-        </div>
-        </div>
-        
-        
-            <div class="col-12 my-5">
-              <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                  <div class="detail-v1">
-                    <span class="detail-label">Project Date</span>
-                    <span class="detail-val">December 20th, 2024</span>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                  <div class="detail-v1">
-                    <!-- <span class="detail-label">Role</span>
-                    <span class="detail-val"><a href="#">Identity</a>, <a href="#">Web Design</a></span> -->
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                  <div class="detail-v1">
-                    <!-- <span class="detail-label">Client</span>
-                    <span class="detail-val">Untree.co</span> -->
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                  <div class="detail-v1">
-                    <!-- <span class="detail-label">Visit</span>
-                    <span class="detail-val"><a href="https://untree.co">https://untree.co/</a></span> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <p>This project focuses on implementing a Continuous Integration and Continuous Deployment (CI/CD) pipeline using Jenkins, ensuring automated build, test, and deployment for software applications.</p>
-            </div>
-            <div class="col-md-6">
-              <p><b>Key Features:</b></p>
-              <li>
-                <b>Automated Build & Deployment: </b> Uses Jenkins pipelines to automate code integration and deployment.
-              </li>
-              <li>
-                <b>Version Control Integration: </b>Connects with GitHub/GitLab/Bitbucket for source code management.
-              </li>
-              <li>
-                <b>Testing & Code Quality: </b>Runs unit tests and static code analysis using tools like JUnit and SonarQube.
-              </li>
-              <li>
-                <b>Docker & Kubernetes Deployment: </b>Builds and deploys applications in Docker containers or on Kubernetes clusters.
-              </li>
-              <li>
-                <b>Notification & Monitoring: </b>Sends build status notifications via Webhooks.
-              </li>
+        <div class="portfolio-single-inner mb-5">
+          <h2 class="heading-portfolio-single-h2">Jenkins CI/CD Pipeline</h2>
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <img src="images/img_6.png" alt="Jenkins Pipeline" class="img-fluid w-100">
             </div>
           </div>
-
         </div>
+
+        <div class="project-details">
+          <div class="row justify-content-center text-center text-md-start align-items-center">
+            <div class="col-lg-10 d-flex justify-content-center justify-content-md-between flex-wrap gap-4">
+              <div class="detail-v1">
+                <span class="detail-label d-block">Project Date</span>
+                <span class="detail-val fs-5">December 20th, 2024</span>
+              </div>
+              <div class="detail-v1">
+                <span class="detail-label d-block">Platform</span>
+                <span class="detail-val fs-5">Jenkins CI/CD</span>
+              </div>
+              <div class="detail-v1">
+                <span class="detail-label d-block">Integration</span>
+                <span class="detail-val fs-5">GitHub / GitLab / Bitbucket</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://github.com/uzairsaeedi/Jenkins-CI-CD-pipeline.git" target="_blank"
+              class="btn btn-outline-dark btn-github">
+              <span class="icon-github me-2"></span> View GitHub Repo
+            </a>
+        </div>
+
+        <div class="row gy-4 align-items-start mt-4">
+          <div class="col-md-6">
+            <p class="lead">
+              This project focuses on implementing a Continuous Integration and Continuous Deployment (CI/CD) pipeline
+              using Jenkins, ensuring automated build, test, and deployment for software applications.
+            </p>
+          </div>
+
+          <div class="col-md-6">
+            <p class="fw-semibold mb-2">Key Features:</p>
+            <ul class="list-unstyled">
+              <li class="mb-2"><b>Automated Build & Deployment:</b> Uses Jenkins pipelines to automate code integration
+                and deployment.</li>
+              <li class="mb-2"><b>Version Control Integration:</b> Connects with GitHub/GitLab/Bitbucket for source code
+                management.</li>
+              <li class="mb-2"><b>Testing & Code Quality:</b> Runs unit tests and static code analysis using tools like
+                JUnit and SonarQube.</li>
+              <li class="mb-2"><b>Docker & Kubernetes Deployment:</b> Builds and deploys applications in Docker
+                containers or on Kubernetes clusters.</li>
+              <li class="mb-2"><b>Notification & Monitoring:</b> Sends build status notifications via Webhooks.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 
-
   <div class="site-footer">
     <div class="container">
-        <div class="col-lg-3">
-          <div class="widget">
-            <h3>Contact</h3>
-            <!-- <address>43 Raymouth Rd. Baltemoer, London 3910</address> -->
-            <ul class="list-unstyled links mb-4">
-              <li><a href="tel://923330321627">+92 3330321627</a></li>
-              <li><a href="tel://923330321627">+92 3195957277</a></li>
-              <li><a href="mailto:uzairsaeedi627@gmail.com">uzairsaeedi627@gmail.com</a></li>
-            </ul>
+      <div class="col-lg-3">
+        <div class="widget">
+          <h3>Contact</h3>
+          <ul class="list-unstyled links mb-4">
+            <li><a href="tel://923330321627">+92 3330321627</a></li>
+            <li><a href="tel://923330321627">+92 3195957277</a></li>
+            <li><a href="mailto:uzairsaeedi627@gmail.com">uzairsaeedi627@gmail.com</a></li>
+          </ul>
 
-            <h3>Connect</h3>
-            <ul class="list-unstyled social d-flex gap-3">
-              <!-- <li><a href="#"><span class="icon-instagram"></span></a></li>
-              <li><a href="#"><span class="icon-twitter"></span></a></li> -->
-              <li><a href="https://www.facebook.com/muhammaduzairsaeedi/"><span class="icon-facebook"></span></a></li>
-              <li><a href="https://www.linkedin.com/in/muhammad-uzair-saeedi"><span class="icon-linkedin"></span></a></li>
-              <!-- <li><a href="#"><span class="icon-pinterest"></span></a></li> -->
-              <li><a href="https://www.github.com/uzairsaeedi"><span class="icon-github"></span></a></li>
-            </ul>
-          </div> <!-- /.widget -->
-        </div> <!-- /.col-lg-3 -->
-    </div> <!-- /.container -->
-  </div> <!-- /.site-footer -->
+          <h3>Connect</h3>
+          <ul class="list-unstyled social d-flex gap-3">
+            <li><a href="https://www.facebook.com/muhammaduzairsaeedi/"><span class="icon-facebook"></span></a></li>
+            <li><a href="https://www.linkedin.com/in/muhammad-uzair-saeedi"><span class="icon-linkedin"></span></a></li>
+            <li><a href="https://www.github.com/uzairsaeedi"><span class="icon-github"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -184,9 +222,8 @@
   <script src="js/TweenMax.min.js"></script>
   <script src="js/ScrollMagic.min.js"></script>
   <script src="js/scrollmagic.animation.gsap.min.js"></script>
-
   <script src="js/custom.js"></script>
-  
+
 </body>
 
 </html>
