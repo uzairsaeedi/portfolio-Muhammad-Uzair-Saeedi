@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.png">
+
+  <meta name="description" content="MERN Stack Contacts Management System by Muhammad Uzair Saeedi" />
+  <meta name="keywords" content="MERN, MongoDB, Express, React, Node.js, Full Stack, Portfolio, Contact App" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Mono&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>MERN Stack My Contacts Application</title>
+
+  <style>
+    /* --- Carousel Styling --- */
+    .carousel-inner img {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .carousel-item {
+      transition: opacity 1s ease-in-out, transform 1s ease;
+    }
+
+    .custom-carousel-btn {
+      width: 58px;
+      height: 58px;
+      border: none;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-carousel-btn:hover {
+      background: linear-gradient(90deg, #0d6efd, #6610f2);
+      box-shadow: 0 0 20px rgba(13, 110, 253, 0.5);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .carousel-nav-icon {
+      color: #fff;
+      font-size: 1.8rem;
+      transition: transform 0.2s ease;
+    }
+
+    .custom-carousel-btn:hover .carousel-nav-icon {
+      transform: scale(1.2);
+    }
+
+    .carousel-indicators {
+      bottom: 18px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      width: 12px;
+      height: 12px;
+      background-color: rgba(255, 255, 255, 0.6);
+      border: none;
+      border-radius: 50%;
+      margin: 0 5px;
+      transition: all 0.5s ease;
+    }
+
+    .carousel-indicators .active {
+      background-color: #0d6efd;
+      transform: scale(1.3);
+      box-shadow: 0 0 12px rgba(13, 110, 253, 0.8);
+    }
+
+    @media (max-width: 768px) {
+      .custom-carousel-btn {
+        width: 45px;
+        height: 45px;
+      }
+
+      .carousel-nav-icon {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* --- Project Details Section --- */
+    .detail-v1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .detail-label {
+      font-weight: 600;
+      color: #6c757d;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .detail-val {
+      font-size: 1.05rem;
+      color: #000;
+    }
+
+    .visit-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #fff;
+      background: linear-gradient(90deg, #0d6efd, #6610f2);
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+    }
+
+    .visit-link:hover {
+      background: linear-gradient(90deg, #6610f2, #0d6efd);
+      box-shadow: 0 6px 14px rgba(102, 16, 242, 0.4);
+      transform: translateY(-2px);
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* --- Text Section Improvements --- */
+    .project-description p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .project-description ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .project-description ul li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .project-description ul li::before {
+      content: "✔";
+      color: #0d6efd;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
+
+  <!-- Navbar -->
+  <nav class="site-nav dark site-navbar-target">
+    <div class="container">
+      <div class="site-navigation">
+        <a href="index.html" class="logo m-0">Project<span class="text-primary">.</span></a>
+        <ul class="js-clone-nav d-none d-lg-inline-none site-menu float-right">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+        </ul>
+        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-inline-block"
+          data-toggle="collapse" data-target="#main-navbar">
+          <span></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Portfolio Section -->
+  <div class="untree_co-section untree_co-section-4 pb-0" id="portfolio-section">
+    <div class="container">
+      <div class="portfolio-single-wrap unslate_co--section" id="portfolio-single-section">
+
+        <div class="container my-5 text-center">
+          <h2 class="heading-portfolio-single-h2 text-black mb-4">MERN Stack My Contacts Application</h2>
+
+          <!-- Carousel -->
+          <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500"
+            data-bs-pause="hover">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner rounded-4 shadow-lg overflow-hidden">
+              <div class="carousel-item active">
+                <img src="images/14-1.png" class="d-block w-100" alt="App Screenshot 1">
+              </div>
+              <div class="carousel-item">
+                <img src="images/14-2.png" class="d-block w-100" alt="App Screenshot 2">
+              </div>
+              <div class="carousel-item">
+                <img src="images/14-3.png" class="d-block w-100" alt="App Screenshot 3">
+              </div>
+            </div>
+
+            <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#imageCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-nav-icon"><i class="icon-arrow-left2"></i></span>
+            </button>
+            <button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#imageCarousel"
+              data-bs-slide="next">
+              <span class="carousel-nav-icon"><i class="icon-arrow-right2"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project Details -->
+        <div class="col-12 my-5">
+          <div class="row justify-content-center align-items-center text-center text-md-start">
+            <div class="col-md-6 col-lg-4 mb-3 mb-md-0">
+              <div class="detail-v1">
+                <span class="detail-label">Project Date</span>
+                <span class="detail-val">October 10th, 2025</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 text-md-end">
+              <a href="https://github.com/uzairsaeedi/MERN-Contacts-App.git" target="_blank" class="visit-link">
+                <span class="icon-github me-2 mr-2"></span>View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Description -->
+        <div class="row gy-4 project-description">
+          <div class="col-md-6">
+            <p>
+              The <b>MERN Contacts Application</b> is a full-stack contact management system developed using
+              <b>MongoDB, Express.js, React, and Node.js</b>. It allows users to securely manage personal and
+              professional contacts through an intuitive modern interface. This project enhanced my skills in <b>JWT
+                authentication</b>, <b>secure RESTful APIs</b>, and <b>MongoDB data handling</b> while building a
+              production-grade application.
+            </p>
+          </div>
+
+          <div class="col-md-6">
+            <p><b>Key Features:</b></p>
+            <ul>
+              <li><b>Secure Authentication:</b> JSON Web Tokens (JWT) for data protection.</li>
+              <li><b>User-Specific Contacts:</b> Private contact lists for each user.</li>
+              <li><b>CRUD Operations:</b> Full add, edit, delete, and view functionality.</li>
+              <li><b>Modern UI:</b> Clean and responsive React-based design.</li>
+              <li><b>Automated Deployment:</b> CI/CD pipeline using <b>Jenkins</b> & <b>Docker</b>.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="site-footer mt-5">
+    <div class="container">
+      <div class="col-lg-3">
+        <div class="widget">
+          <h3>Contact</h3>
+          <ul class="list-unstyled links mb-4">
+            <li><a href="tel://923330321627">+92 3330321627</a></li>
+            <li><a href="tel://923195957277">+92 3195957277</a></li>
+            <li><a href="mailto:uzairsaeedi627@gmail.com">uzairsaeedi627@gmail.com</a></li>
+          </ul>
+          <h3>Connect</h3>
+          <ul class="list-unstyled social d-flex gap-3">
+            <li><a href="https://www.facebook.com/muhammaduzairsaeedi/"><span class="icon-facebook"></span></a></li>
+            <li><a href="https://www.linkedin.com/in/muhammad-uzair-saeedi"><span class="icon-linkedin"></span></a></li>
+            <li><a href="https://www.github.com/uzairsaeedi"><span class="icon-github"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
