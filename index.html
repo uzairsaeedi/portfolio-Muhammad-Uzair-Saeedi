@@ -114,7 +114,6 @@
                 Download My Resume
               </a>
             </p>
-            <!-- <p class="gsap-reveal-hero"><a href="https://untree.co/" target="_blank" class="btn btn-outline-black">More free templates here</a></p>     -->
           </div>
         </div>
       </div>
@@ -177,6 +176,15 @@
                   alt="Images"
                 />
               </a>
+
+              <div class="text-center mt-2 lazy-btn-wrapper hidden-btn">
+                <button
+                  class="fancy-btn openAppDemoBtn"
+                  data-url="https://appetize.io/app/b_ccmp2cw52peztgkq74cu3czgqm"
+                >
+                  🚀 Run RentEase Demo
+                </button>
+              </div>
             </div>
 
             <div
@@ -246,6 +254,14 @@
                   alt="Images"
                 />
               </a>
+              <div class="text-center mt-2 lazy-btn-wrapper hidden-btn">
+                <button
+                  class="fancy-btn openAppDemoBtn"
+                  data-url="https://appetize.io/app/b_skizrqqpwh7fht335pqetmeogi"
+                >
+                  🚀 Run Currency Converter Demo
+                </button>
+              </div>
             </div>
 
             <div
@@ -315,6 +331,14 @@
                   alt="Images"
                 />
               </a>
+              <div class="text-center mt-2 lazy-btn-wrapper hidden-btn">
+                <button
+                  class="fancy-btn openAppDemoBtn"
+                  data-url="https://appetize.io/app/b_4s6ejorgmev7vdrjrjdvc2ynny"
+                >
+                  🚀 Run My Story Teller Demo
+                </button>
+              </div>
             </div>
 
             <div
@@ -929,11 +953,120 @@
       </div>
     </div>
 
+    <div class="modal fade" id="appDemoModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">App Demo</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-0" style="height: 78vh">
+            <iframe
+              id="appetizeFrame"
+              src=""
+              style="width: 100%; height: 100%; border: 0"
+              allow="autoplay; fullscreen; clipboard-write"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .hidden-btn {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.7s ease-in-out;
+      }
+      .show-btn {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Fancy Button */
+      .fancy-btn {
+        background: linear-gradient(135deg, #0d6efd, #6610f2);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 30px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      /* Glow border */
+      .fancy-btn::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(90deg, #0dcaf0, #0d6efd, #6610f2, #d63384);
+        border-radius: 32px;
+        z-index: -1;
+        filter: blur(6px);
+        opacity: 0.7;
+        animation: glowing 3s linear infinite;
+      }
+
+      /* Hover effect */
+      .fancy-btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Shine animation */
+      .fancy-btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 80%
+        );
+        transform: skewX(-25deg);
+      }
+      .fancy-btn:hover::after {
+        left: 130%;
+        transition: left 0.6s ease;
+      }
+
+      /* Glow animation */
+      @keyframes glowing {
+        0% {
+          filter: blur(6px) hue-rotate(0deg);
+        }
+        50% {
+          filter: blur(6px) hue-rotate(180deg);
+        }
+        100% {
+          filter: blur(6px) hue-rotate(360deg);
+        }
+      }
+    </style>
+
     <script>
       const form = document.getElementById("contactForm");
 
       form.addEventListener("submit", async function (e) {
-        e.preventDefault(); // prevent page reload
+        e.preventDefault();
 
         const formData = new FormData(form);
 
@@ -956,6 +1089,54 @@
         } else {
           alert("Oops! Something went wrong. Please try again.");
         }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const lazyBtnWrappers = document.querySelectorAll(".lazy-btn-wrapper");
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show-btn");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+
+        lazyBtnWrappers.forEach((wrapper) => observer.observe(wrapper));
+
+        const demoButtons = document.querySelectorAll(".openAppDemoBtn");
+
+        demoButtons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const url = this.getAttribute("data-url");
+            if (!url) return alert("Demo URL not found!");
+
+            var w = 420,
+              h = 740;
+            var left = screen.width / 2 - w / 2;
+            var top = screen.height / 2 - h / 2;
+
+            window.open(
+              url,
+              "appDemoWindow",
+              "width=" +
+                w +
+                ",height=" +
+                h +
+                ",top=" +
+                top +
+                ",left=" +
+                left +
+                ",resizable=yes,scrollbars=no,toolbar=no,menubar=no,location=no,status=no"
+            );
+          });
+        });
       });
     </script>
 

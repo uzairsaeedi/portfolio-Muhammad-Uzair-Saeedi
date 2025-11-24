@@ -595,6 +595,29 @@ var owlSingleSlider = function () {
 	}
 }
 
+// 🔹 Lazy fade-in for buttons
+const lazyFadeElements = document.querySelectorAll(".lazy-fade");
+
+const observer = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        obs.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+lazyFadeElements.forEach((el) => observer.observe(el));
+
+// 🔹 Button click handler (multiple projects)
+$(document).on("click", ".fancy-btn[data-demo]", function () {
+  const demoUrl = $(this).data("demo");
+  window.open(demoUrl, "_blank");
+});
+
 
 })
 
