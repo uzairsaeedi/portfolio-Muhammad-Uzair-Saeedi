@@ -133,6 +133,19 @@
   </div>
 
   <style>
+    /* --- Global Dark Theme Text Styling --- */
+    body {
+      color: #c7d2e5;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #f4f6fb !important;
+    }
+
+    p {
+      color: #c7d2e5;
+    }
+
     .heading-portfolio-single-h2 {
       font-size: 2rem;
       font-weight: 700;
@@ -140,33 +153,25 @@
     }
 
     .project-details {
-      background: #f8f9fa;
+      background: linear-gradient(160deg, rgba(20, 31, 51, 0.95), rgba(12, 18, 30, 0.95));
+      border: 1px solid rgba(255, 255, 255, 0.06);
       padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border-radius: 16px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35), 0 10px 50px rgba(34, 211, 238, 0.18);
     }
 
     .detail-v1 .detail-label {
       font-size: 0.95rem;
-      color: #6c757d;
+      color: #c7d2e5;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
     }
 
     .detail-v1 .detail-val {
       font-size: 1.05rem;
       font-weight: 600;
-      color: #212529;
-    }
-
-    .visit-link {
-      color: #0d6efd;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s, transform 0.2s;
-    }
-
-    .visit-link:hover {
-      color: #084298;
-      transform: scale(1.05);
+      color: #f4f6fb;
     }
 
     .img-fluid {
@@ -180,7 +185,19 @@
     }
 
     ul li::marker {
-      color: #0d6efd;
+      color: #22d3ee;
+    }
+
+    .visit-link {
+      color: #22d3ee;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    .visit-link:hover {
+      color: #084298;
+      transform: scale(1.05);
     }
   </style>
 

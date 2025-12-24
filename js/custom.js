@@ -425,10 +425,12 @@ $(function(){
 					$(this).find('.circle').circleProgress({
 						startAngle: -Math.PI / 2,
 						value: percent / 100,
-						thickness: 4,
+						thickness: 6,
 						fill: {
-							color: '#000000'
-						}
+							color: '#22d3ee'
+						},
+						emptyFill: 'rgba(255, 255, 255, 0.08)',
+						lineCap: 'round'
 					}).on('circle-animation-progress', function (event, progress, stepValue) {
 						$(this).find('div').text((stepValue*100).toFixed(0) + "%");
 					}).stop();
