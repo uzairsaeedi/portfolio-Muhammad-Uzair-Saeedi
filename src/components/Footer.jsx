@@ -71,7 +71,7 @@ export default function Footer() {
               <p>+92 319 5957277</p>
             </div>
             <a
-              href="/assets/MuhammadUzairSaeedi.pdf"
+              href={import.meta.env.BASE_URL + 'assets/MuhammadUzairSaeedi.pdf'}
               download
               className="inline-flex items-center gap-1.5 text-xs text-brand-blue/70 hover:text-brand-blue transition-colors"
             >

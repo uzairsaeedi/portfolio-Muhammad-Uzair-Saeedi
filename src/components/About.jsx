@@ -47,7 +47,7 @@ export default function About() {
               <div className="absolute -inset-3 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-3xl blur-2xl opacity-20" />
               <div className="relative p-0.5 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-2xl">
                 <img
-                  src="/images/uzair.HEIC"
+                  src={import.meta.env.BASE_URL + 'images/uzair.HEIC'}
                   alt="Muhammad Uzair Saeedi"
                   className="w-72 h-85 object-cover rounded-2xl bg-navy-800"
                 />

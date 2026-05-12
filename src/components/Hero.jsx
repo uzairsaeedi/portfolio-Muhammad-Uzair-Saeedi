@@ -151,14 +151,14 @@ export default function Hero() {
               className="flex flex-wrap gap-3.5 mb-9"
             >
               <a
-                href="/assets/MuhammadUzairSaeedi.pdf"
+                href={import.meta.env.BASE_URL + 'assets/MuhammadUzairSaeedi.pdf'}
                 download
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-brand-blue to-brand-cyan text-white font-semibold rounded-full text-sm hover:opacity-90 hover:shadow-xl hover:shadow-brand-blue/30 hover:-translate-y-0.5 transition-all duration-300"
               >
                 <HiDownload size={16} /> Full Stack Resume
               </a>
               <a
-                href="/assets/MuhammadUzairSaeedi_DevOps.pdf"
+                href={import.meta.env.BASE_URL + 'assets/MuhammadUzairSaeedi_DevOps.pdf'}
                 download
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 border border-brand-blue/40 text-brand-blue font-semibold rounded-full text-sm hover:bg-brand-blue/10 hover:border-brand-blue hover:-translate-y-0.5 transition-all duration-300"
               >
