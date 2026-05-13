@@ -341,7 +341,7 @@ export const projects = [
       'Optimized Performance: Smooth navigation and fast data synchronization.',
       'Responsive UI: Visually appealing interface built with React Native components.',
     ],
-    demo: 'https://appetize.io/app/b_ccmp2cw52peztgkq74cu3czgqm',
+    demo: 'https://appetize.io/app/b_j3vmitbclkxis5evgvfis4eplu',
     link: '/projects/chat-app',
   },
   {

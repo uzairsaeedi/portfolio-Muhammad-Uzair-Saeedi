@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import BackgroundDots from './components/BackgroundDots'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Portfolio from './components/Portfolio'
@@ -32,11 +33,14 @@ function Home() {
 
 export default function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects/:slug" element={<ProjectDetail />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BackgroundDots />
+      <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }

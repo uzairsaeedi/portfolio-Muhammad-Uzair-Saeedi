@@ -104,14 +104,26 @@ export default function Portfolio() {
                   <HiX size={16} />
                 </button>
               </div>
-              <iframe
-                src={demoUrl}
-                width="100%"
-                height="560"
-                className="rounded-xl bg-navy-900"
-                title="App Demo"
-                allowFullScreen
-              />
+              <div className="flex flex-col items-center gap-5 py-6 px-2">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-blue/20 to-brand-cyan/20 border border-brand-blue/20 flex items-center justify-center">
+                  <FaPlay size={22} className="text-brand-cyan ml-1" />
+                </div>
+                <div className="text-center">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-1">
+                    This demo runs on Appetize.io and must be opened in a new tab.
+                  </p>
+                  <p className="text-gray-600 text-xs">Interactive mobile app preview</p>
+                </div>
+                <a
+                  href={demoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => setDemoUrl(null)}
+                  className="inline-flex items-center gap-2.5 px-7 py-3 bg-gradient-to-r from-brand-blue to-brand-cyan text-white font-semibold rounded-full text-sm hover:opacity-90 hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-brand-blue/25"
+                >
+                  <FaPlay size={11} /> Open Live Demo
+                </a>
+              </div>
             </motion.div>
           </motion.div>
         )}
