@@ -39,4 +39,20 @@ export default defineConfig({
     },
   ],
   base: '/portfolio-Muhammad-Uzair-Saeedi/',
+  build: {
+    copyPublicDir: true,
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.')
+          const ext = info[info.length - 1]
+          if (['pdf'].includes(ext)) {
+            return `assets/[name][extname]`
+          }
+          return `assets/[name]-[hash][extname]`
+        },
+      },
+    },
+  },
 })

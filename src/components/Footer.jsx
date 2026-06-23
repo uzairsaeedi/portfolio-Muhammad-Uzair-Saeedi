@@ -83,9 +83,10 @@ export default function Footer() {
               <p>+92 319 5957277</p>
             </div>
             <a
-              href={import.meta.env.BASE_URL + 'assets/MuhammadUzairSaeedi.pdf'}
+              href={import.meta.env.BASE_URL + 'MuhammadUzairSaeedi.pdf'}
               target="_blank"
               rel="noopener noreferrer"
+              download
               className="inline-flex items-center gap-1.5 text-xs font-medium px-4 py-2 glass-card rounded-full text-brand-blue hover:text-brand-cyan hover:border-brand-blue/50 transition-all duration-300"
             >
               Download Resume <span className="text-sm leading-none">→</span>
