@@ -84,7 +84,8 @@ export default function Footer() {
             </div>
             <a
               href={import.meta.env.BASE_URL + 'assets/MuhammadUzairSaeedi.pdf'}
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-medium px-4 py-2 glass-card rounded-full text-brand-blue hover:text-brand-cyan hover:border-brand-blue/50 transition-all duration-300"
             >
               Download Resume <span className="text-sm leading-none">→</span>
