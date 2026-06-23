@@ -23,7 +23,7 @@ export default function Footer() {
               <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">Uzair</span>
               <span className="text-white">.</span>
             </div>
-            <p className="text-gray-500 text-sm leading-relaxed mb-5 max-w-[260px]">
+            <p className="text-gray-300 text-sm leading-relaxed mb-5 max-w-[260px] font-medium">
               Full Stack Developer · Mobile App Developer · DevOps Engineer
             </p>
             <div className="flex gap-2.5">
@@ -34,7 +34,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="w-10 h-10 glass-card rounded-xl flex items-center justify-center text-gray-500 hover:text-white hover:bg-brand-blue/20 hover:border-brand-blue/30 transition-all duration-300"
+                  className="w-10 h-10 glass-card rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-blue/20 hover:border-brand-blue/30 transition-all duration-300"
                 >
                   <Icon size={16} />
                 </a>
@@ -55,7 +55,7 @@ export default function Footer() {
                     smooth
                     duration={500}
                     offset={-66}
-                    className="text-gray-500 text-sm hover:text-brand-cyan cursor-pointer transition-colors duration-200 flex items-center gap-2 group"
+                    className="text-gray-200 text-sm hover:text-brand-cyan cursor-pointer transition-colors duration-200 flex items-center gap-2 group font-medium"
                   >
                     <span className="hidden sm:block w-0 group-hover:w-3 h-px bg-brand-cyan transition-all duration-300 flex-shrink-0" />
                     {item}
@@ -70,11 +70,11 @@ export default function Footer() {
             <h4 className="font-heading font-semibold text-white text-[11px] mb-4 uppercase tracking-widest">
               Contact
             </h4>
-            <div className="space-y-2 text-gray-500 text-sm mb-5">
+            <div className="space-y-2 text-gray-200 text-sm mb-5 font-medium">
               <p>
                 <a
                   href="mailto:uzairsaeedi627@gmail.com"
-                  className="hover:text-gray-300 transition-colors break-all"
+                  className="hover:text-white transition-colors break-all"
                 >
                   uzairsaeedi627@gmail.com
                 </a>
@@ -85,7 +85,7 @@ export default function Footer() {
             <a
               href={import.meta.env.BASE_URL + 'assets/MuhammadUzairSaeedi.pdf'}
               download
-              className="inline-flex items-center gap-1.5 text-xs font-medium px-4 py-2 glass-card rounded-full text-brand-blue/80 hover:text-brand-blue hover:border-brand-blue/30 transition-all duration-300"
+              className="inline-flex items-center gap-1.5 text-xs font-medium px-4 py-2 glass-card rounded-full text-brand-blue hover:text-brand-cyan hover:border-brand-blue/50 transition-all duration-300"
             >
               Download Resume <span className="text-sm leading-none">→</span>
             </a>
@@ -94,7 +94,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-gray-600 text-xs text-center sm:text-left">
+          <p className="text-gray-500 text-xs text-center sm:text-left font-medium">
             © {new Date().getFullYear()} Muhammad Uzair Saeedi. All rights reserved.
           </p>
         </div>

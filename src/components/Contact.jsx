@@ -60,7 +60,7 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
           >
             <h3 className="font-heading text-2xl font-bold text-white mb-3">Let's build something together</h3>
-            <p className="text-gray-400 text-sm leading-relaxed mb-9">
+            <p className="text-gray-100 text-sm leading-relaxed mb-9 font-medium">
               Have a project idea or want to discuss opportunities? I'm always open to new challenges. I'll respond within 24 hours.
             </p>
 
@@ -71,15 +71,15 @@ export default function Contact() {
                     <Icon className="text-brand-blue" size={15} />
                   </div>
                   <div>
-                    <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">{label}</p>
-                    <a href={href} className="text-gray-300 hover:text-white text-sm transition-colors">{value}</a>
+                    <p className="text-[10px] text-gray-200 uppercase tracking-wider mb-0.5 font-semibold">{label}</p>
+                    <a href={href} className="text-gray-100 hover:text-white text-sm transition-colors font-semibold">{value}</a>
                   </div>
                 </div>
               ))}
             </div>
 
             <div>
-              <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-3">Find me on</p>
+              <p className="text-[10px] text-gray-200 uppercase tracking-wider mb-3 font-semibold">Find me on</p>
               <div className="flex gap-2.5">
                 {socials.map(({ Icon, href, label, color }) => (
                   <a
@@ -88,7 +88,7 @@ export default function Contact() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={label}
-                    className="w-11 h-11 glass-card rounded-xl flex items-center justify-center text-gray-400 hover:scale-110 transition-all duration-300"
+                    className="w-11 h-11 glass-card rounded-xl flex items-center justify-center text-gray-300 hover:scale-110 transition-all duration-300"
                     onMouseEnter={(e) => { e.currentTarget.style.color = color; e.currentTarget.style.borderColor = `${color}40` }}
                     onMouseLeave={(e) => { e.currentTarget.style.color = ''; e.currentTarget.style.borderColor = '' }}
                   >
@@ -111,7 +111,7 @@ export default function Contact() {
                   <HiCheckCircle size={64} className="text-green-400 mb-4" />
                 </motion.div>
                 <h3 className="font-heading text-xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-gray-400 text-sm mb-6">Thanks for reaching out. I'll get back to you soon.</p>
+                <p className="text-gray-100 text-sm mb-6 font-medium">Thanks for reaching out. I'll get back to you soon.</p>
                 <button
                   onClick={() => setStatus('idle')}
                   className="px-6 py-2.5 bg-brand-blue/15 text-brand-blue rounded-full text-sm hover:bg-brand-blue/25 transition-colors"
@@ -127,7 +127,7 @@ export default function Contact() {
                 </div>
                 <Field label="Email" name="email" type="email" value={form.email} onChange={onChange} placeholder="john@example.com" />
                 <div>
-                  <label className="block text-xs text-gray-400 font-medium mb-1.5">Message</label>
+                  <label className="block text-xs text-gray-200 font-semibold mb-1.5">Message</label>
                   <textarea
                     name="message"
                     value={form.message}
@@ -135,7 +135,7 @@ export default function Contact() {
                     required
                     rows={5}
                     placeholder="Tell me about your project or opportunity..."
-                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-brand-blue/40 focus:bg-white/[0.07] transition-all resize-none"
+                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm placeholder-gray-400 focus:outline-none focus:border-brand-blue/40 focus:bg-white/[0.07] transition-all resize-none"
                   />
                 </div>
                 {status === 'error' && <p className="text-red-400 text-xs">Something went wrong. Please try again.</p>}
@@ -159,7 +159,7 @@ export default function Contact() {
 function Field({ label, name, type = 'text', value, onChange, placeholder }) {
   return (
     <div>
-      <label className="block text-xs text-gray-400 font-medium mb-1.5">{label}</label>
+      <label className="block text-xs text-gray-200 font-semibold mb-1.5">{label}</label>
       <input
         name={name}
         type={type}
@@ -167,7 +167,7 @@ function Field({ label, name, type = 'text', value, onChange, placeholder }) {
         onChange={onChange}
         required
         placeholder={placeholder}
-        className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-brand-blue/40 focus:bg-white/[0.07] transition-all"
+        className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm placeholder-gray-400 focus:outline-none focus:border-brand-blue/40 focus:bg-white/[0.07] transition-all"
       />
     </div>
   )

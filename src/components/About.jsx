@@ -71,7 +71,7 @@ export default function About() {
               Full Stack Developer · Mobile App Developer · DevOps Engineer
             </p>
 
-            <div className="space-y-4 text-gray-400 text-[0.95rem] leading-relaxed mb-8">
+            <div className="space-y-4 text-white text-[0.95rem] leading-relaxed mb-8 font-medium">
               <p>
                 I'm a DevOps Engineer and Full Stack Developer focused on building, automating, and
                 scaling production-grade systems. My work centers on bridging development and operations —
@@ -92,7 +92,7 @@ export default function About() {
                   className="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/[0.06]"
                 >
                   <span className="text-lg flex-shrink-0">{item.icon}</span>
-                  <p className="text-gray-400 text-xs leading-snug">{item.text}</p>
+                <p className="text-gray-100 text-xs leading-snug font-medium">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -108,7 +108,7 @@ export default function About() {
               </a>
               <a
                 href="mailto:uzairsaeedi627@gmail.com"
-                className="inline-flex items-center gap-2 px-5 py-2.5 glass-card rounded-full text-sm font-semibold text-gray-300 hover:text-white hover:border-white/20 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-5 py-2.5 glass-card rounded-full text-sm font-semibold text-gray-200 hover:text-white hover:border-white/30 transition-all duration-300"
               >
                 <FaEnvelope /> Email Me
               </a>
@@ -135,14 +135,19 @@ export default function About() {
             >
               <span className="text-3xl mb-3 block">{item.emoji}</span>
               <h4 className="font-heading font-semibold text-white mb-3">{item.title}</h4>
-              <div className="flex flex-wrap gap-1.5">
-                {item.tags.map((tag) => (
-                  <span
+              <div className="flex flex-wrap gap-2">
+                {item.tags.map((tag, idx) => (
+                  <motion.span
                     key={tag}
-                    className="text-xs px-2 py-0.5 bg-brand-blue/8 text-brand-blue/70 border border-brand-blue/15 rounded-md"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.05, duration: 0.3 }}
+                    className="text-xs px-3 py-1.5 bg-gradient-to-r from-brand-blue to-brand-cyan text-white rounded-full font-semibold shadow-lg shadow-brand-blue/40 hover:shadow-xl hover:shadow-brand-blue/60 hover:scale-105 transition-all duration-200 cursor-default border border-brand-blue/80 inline-flex items-center gap-1"
                   >
+                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-white/60" />
                     {tag}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
             </motion.div>

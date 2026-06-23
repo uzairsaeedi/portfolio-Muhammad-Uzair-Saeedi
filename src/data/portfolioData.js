@@ -370,8 +370,8 @@ export const projects = [
 ]
 
 export const categoryColors = {
-  Web: 'bg-violet-500/15 text-violet-400',
-  Mobile: 'bg-emerald-500/15 text-emerald-400',
-  DevOps: 'bg-orange-500/15 text-orange-400',
-  'AI/ML': 'bg-pink-500/15 text-pink-400',
+  Web: 'bg-gradient-to-r from-violet-500 to-violet-600 text-white font-bold shadow-md shadow-violet-500/40 rounded-lg px-3 py-1.5',
+  Mobile: 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold shadow-md shadow-emerald-500/40 rounded-lg px-3 py-1.5',
+  DevOps: 'bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold shadow-md shadow-orange-500/40 rounded-lg px-3 py-1.5',
+  'AI/ML': 'bg-gradient-to-r from-pink-500 to-pink-600 text-white font-bold shadow-md shadow-pink-500/40 rounded-lg px-3 py-1.5',
 }

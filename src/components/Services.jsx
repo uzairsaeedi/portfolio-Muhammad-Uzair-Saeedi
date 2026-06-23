@@ -107,23 +107,32 @@ function ServiceCard({ service, index, num }) {
       </div>
 
       <h3 className="font-heading font-bold text-white text-lg mb-2.5">{title}</h3>
-      <p className="text-gray-400 text-sm leading-relaxed mb-5">{description}</p>
+      <p className="text-gray-100 text-sm leading-relaxed mb-5 font-medium">{description}</p>
 
       <div className="flex items-center justify-between">
-        <div className="flex flex-wrap gap-1.5">
-          {tags.map((tag) => (
-            <span
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag, idx) => (
+            <motion.span
               key={tag}
-              className="text-[11px] px-2 py-0.5 rounded font-medium"
-              style={{ background: `${accent}12`, color: `${accent}cc` }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.05, duration: 0.3 }}
+              className="text-xs px-3 py-1.5 rounded-full font-semibold text-white border shadow-md transition-all duration-200 hover:scale-110 hover:shadow-lg cursor-default inline-flex items-center gap-1"
+              style={{ 
+                background: `linear-gradient(135deg, ${accent}, ${accent}cc)`,
+                borderColor: `${accent}88`,
+                boxShadow: `0 4px 12px ${accent}40`
+              }}
             >
+              <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'rgba(255,255,255,0.6)' }} />
               {tag}
-            </span>
+            </motion.span>
           ))}
         </div>
         <HiArrowNarrowRight
           size={16}
-          className="text-gray-600 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 ml-2"
+          className="text-gray-400 group-hover:text-brand-cyan group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 ml-2"
         />
       </div>
     </motion.div>

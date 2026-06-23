@@ -14,7 +14,7 @@ export default function Portfolio() {
   const filtered = active === 'All' ? projects : projects.filter((p) => p.category === active)
 
   return (
-    <section id="portfolio" className="py-28 bg-navy-800 aurora-bg">
+    <section id="portfolio" className="py-28 bg-navy-900 aurora-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export default function Portfolio() {
             My{' '}
             <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">Portfolio</span>
           </h2>
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-200 text-sm font-medium">
             {filtered.length} project{filtered.length !== 1 ? 's' : ''}
             {active !== 'All' && ` in ${active}`}
           </p>
@@ -48,8 +48,8 @@ export default function Portfolio() {
                 onClick={() => setActive(cat)}
                 className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2 ${
                   active === cat
-                    ? 'bg-gradient-to-r from-brand-blue to-brand-cyan text-white shadow-lg shadow-brand-blue/25'
-                    : 'glass-card text-gray-400 hover:text-white hover:border-white/20'
+                    ? 'bg-gradient-to-r from-brand-blue to-brand-cyan text-white shadow-lg shadow-brand-blue/30'
+                    : 'glass-card text-gray-200 hover:text-white hover:border-brand-blue/40'
                 }`}
               >
                 {cat}
@@ -84,7 +84,7 @@ export default function Portfolio() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4"
             onClick={() => setDemoUrl(null)}
           >
             <motion.div
@@ -109,10 +109,10 @@ export default function Portfolio() {
                   <FaPlay size={22} className="text-brand-cyan ml-1" />
                 </div>
                 <div className="text-center">
-                  <p className="text-gray-300 text-sm leading-relaxed mb-1">
+                  <p className="text-gray-200 text-sm leading-relaxed mb-1">
                     This demo runs on Appetize.io and must be opened in a new tab.
                   </p>
-                  <p className="text-gray-600 text-xs">Interactive mobile app preview</p>
+                  <p className="text-gray-500 text-xs">Interactive mobile app preview</p>
                 </div>
                 <a
                   href={demoUrl}
@@ -156,7 +156,7 @@ function ProjectCard({ project, index, onDemo, globalIndex }) {
         />
 
         <div className="absolute top-3 left-3 w-9 h-9 glass-card rounded-xl flex items-center justify-center">
-          <span className="font-mono text-xs text-gray-400 font-semibold">{num}</span>
+          <span className="font-mono text-xs text-gray-100 font-semibold">{num}</span>
         </div>
 
         {project.demo && (
@@ -193,16 +193,24 @@ function ProjectCard({ project, index, onDemo, globalIndex }) {
           <h3 className="font-heading font-semibold text-white text-[0.9rem] leading-snug">
             {project.title}
           </h3>
-          <span className={`text-[10px] px-2.5 py-0.5 rounded-full font-semibold whitespace-nowrap flex-shrink-0 ${categoryColors[project.category]}`}>
+          <span className={`text-xs px-3 py-1.5 rounded-lg font-semibold whitespace-nowrap flex-shrink-0 ${categoryColors[project.category]}`}>
             {project.category}
           </span>
         </div>
-        <p className="text-gray-500 text-xs mb-4">{project.subtitle}</p>
-        <div className="flex flex-wrap gap-1.5 mt-auto">
-          {project.tags.slice(0, 4).map((tag) => (
-            <span key={tag} className="text-[11px] px-2 py-0.5 bg-brand-blue/8 text-brand-blue/70 border border-brand-blue/12 rounded">
+        <p className="text-gray-200 text-xs mb-4 font-medium">{project.subtitle}</p>
+        <div className="flex flex-wrap gap-2 mt-auto">
+          {project.tags.slice(0, 4).map((tag, idx) => (
+            <motion.span 
+              key={tag} 
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.05, duration: 0.3 }}
+              className="text-xs px-3 py-1.5 bg-gradient-to-r from-brand-blue via-brand-blue to-brand-cyan text-white rounded-full font-semibold shadow-md shadow-brand-blue/30 hover:shadow-lg hover:shadow-brand-blue/50 hover:scale-110 transition-all duration-200 border border-brand-blue/70 cursor-default inline-flex items-center gap-1"
+            >
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-white/60" />
               {tag}
-            </span>
+            </motion.span>
           ))}
         </div>
       </div>

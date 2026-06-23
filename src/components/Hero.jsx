@@ -7,8 +7,8 @@ import { HiDownload, HiArrowDown } from 'react-icons/hi'
 const roles = ['Full Stack Developer', 'Mobile App Developer', 'DevOps Engineer']
 
 const techBadges = [
-  ['React.js', 'Docker', 'AWS'],
-  ['Node.js', 'React Native', 'Jenkins'],
+  ['React.js', 'Node.js', 'React Native'],
+  ['Docker', 'Kubernetes', 'AWS', 'Jenkins', 'Github Actions', 'ArgoCD'],
   ['MongoDB', 'Terraform', 'Python'],
 ]
 
@@ -113,7 +113,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.3 }}
-                  className="text-xl md:text-2xl font-heading font-semibold text-gray-300"
+                  className="text-xl md:text-2xl font-heading font-semibold bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent"
                 >
                   {roles[roleIndex]}
                 </motion.span>
@@ -124,7 +124,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-gray-400 text-[1.05rem] leading-relaxed max-w-xl mb-9"
+              className="text-white text-[1.05rem] leading-relaxed max-w-xl mb-9 font-medium"
             >
               I build scalable web apps, cross-platform mobile apps, and robust cloud
               infrastructure — from idea to production deployment, end-to-end.
@@ -139,7 +139,7 @@ export default function Hero() {
               {stats.map((s) => (
                 <div key={s.label} className="text-center">
                   <AnimatedCounter value={s.value} suffix={s.suffix} />
-                  <p className="text-gray-500 text-xs mt-1 leading-none">{s.label}</p>
+              <p className="text-gray-200 text-xs mt-1 leading-none font-medium">{s.label}</p>
                 </div>
               ))}
             </motion.div>
@@ -173,11 +173,11 @@ export default function Hero() {
               className="flex items-center gap-5"
             >
               <a href="https://github.com/uzairsaeedi" target="_blank" rel="noreferrer"
-                className="text-gray-500 hover:text-white transition-colors" aria-label="GitHub">
+                className="text-gray-300 hover:text-brand-cyan transition-colors" aria-label="GitHub">
                 <FaGithub size={21} />
               </a>
               <a href="https://www.linkedin.com/in/muhammad-uzair-saeedi" target="_blank" rel="noreferrer"
-                className="text-gray-500 hover:text-brand-blue transition-colors" aria-label="LinkedIn">
+                className="text-gray-400 hover:text-brand-cyan transition-colors" aria-label="LinkedIn">
                 <FaLinkedin size={21} />
               </a>
               <div className="h-px w-20 bg-gradient-to-r from-white/10 to-transparent" />
@@ -206,7 +206,7 @@ export default function Hero() {
                         delay: globalIndex * 0.2,
                         ease: 'easeInOut',
                       }}
-                      className="glass-card rounded-full px-5 py-2.5 text-sm text-gray-300 hover:text-white hover:border-brand-blue/35 transition-colors cursor-default select-none"
+                      className="glass-card rounded-full px-5 py-2.5 text-sm text-gray-200 hover:text-white hover:border-brand-blue/35 transition-colors cursor-default select-none"
                     >
                       {tech}
                     </motion.div>
@@ -224,9 +224,9 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 7, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
-          className="flex flex-col items-center gap-1.5 text-gray-600 group-hover:text-brand-blue transition-colors"
+          className="flex flex-col items-center gap-1.5 text-gray-400 group-hover:text-brand-cyan transition-colors"
         >
-          <span className="font-mono text-[10px] tracking-widest">scroll</span>
+          <span className="font-mono text-[10px] tracking-widest font-semibold">scroll</span>
           <HiArrowDown size={14} />
         </motion.div>
       </Link>

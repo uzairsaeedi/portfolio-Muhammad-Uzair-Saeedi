@@ -68,7 +68,7 @@ function CircularSkill({ skill, index }) {
 
 export default function Skills() {
   return (
-    <section className="py-28 bg-navy-800">
+    <section className="py-28 bg-navy-900 aurora-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -113,17 +113,22 @@ export default function Skills() {
                   {group.label}
                 </h4>
               </div>
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-2">
                 {group.items.map((tech, i) => (
                   <motion.span
                     key={tech}
-                    initial={{ opacity: 0, scale: 0.85 }}
+                    initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: gi * 0.07 + i * 0.04 }}
-                    className="text-xs px-2.5 py-1 rounded-full text-gray-300 hover:text-white cursor-default transition-colors"
-                    style={{ background: `${group.color}10`, border: `1px solid ${group.color}22` }}
+                    transition={{ delay: gi * 0.07 + i * 0.04, duration: 0.3 }}
+                    className="text-xs px-3 py-1.5 rounded-full text-white cursor-default transition-all font-semibold border shadow-md hover:scale-110 hover:shadow-lg inline-flex items-center gap-1.5"
+                    style={{ 
+                      background: `linear-gradient(135deg, ${group.color}, ${group.color}cc)`,
+                      borderColor: `${group.color}88`,
+                      boxShadow: `0 4px 12px ${group.color}40`
+                    }}
                   >
+                    <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'rgba(255,255,255,0.6)' }} />
                     {tech}
                   </motion.span>
                 ))}
